@@ -3,7 +3,7 @@ public class MergeSortDescending {
     // Fungsi utama untuk menjalankan program
     public static void main(String[] args) {
         // Tentukan nilai-nilai awal
-        int[] data = {85, 67, 90, 45, 78, 92};
+        int[] data = {85, 67, 90, 45, 99, 92};
 
         System.out.println("Data sebelum diurutkan:");
         printArray(data);
@@ -27,8 +27,7 @@ public class MergeSortDescending {
 
             // Gabungkan hasilnya
             merge(arr, left, middle, right);
-            
-            System.out.println("Proses pengurutan:");
+            System.out.println("Proses pengurutan merge:");
             printArray(arr);
         }
     }
@@ -37,7 +36,6 @@ public class MergeSortDescending {
     public static void merge(int[] arr, int left, int middle, int right) {
         int n1 = middle - left + 1;
         int n2 = right - middle;
-
         // Buat array sementara
         int[] leftArray = new int[n1];
         int[] rightArray = new int[n2];
@@ -52,7 +50,6 @@ public class MergeSortDescending {
         int i = 0, j = 0;
         int k = left;
 
-        // Ubah perbandingan untuk urutan menurun
         while (i < n1 && j < n2) {
             if (leftArray[i] >= rightArray[j]) {
                 arr[k] = leftArray[i];

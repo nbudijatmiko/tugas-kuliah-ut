@@ -26,9 +26,6 @@ public class CountingSortDescending {
         for (int num : arr) {
             count[num]++;
         }
-        
-        System.out.println("count");
-        printArray(count);
 
         // Susun ulang data dari nilai tertinggi ke terendah
         int index = 0;
@@ -38,6 +35,7 @@ public class CountingSortDescending {
                 output[index++] = i;
                 count[i]--;
             }
+            
         }
         
 
@@ -50,9 +48,6 @@ public class CountingSortDescending {
         for (int num : arr) {
             if (num > max)
                 max = num;
-
-            System.out.println("Proses pengurutan:");
-            System.out.println(max);
         }
         
         return max;
